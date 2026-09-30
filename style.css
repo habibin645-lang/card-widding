@@ -1,0 +1,1055 @@
+:root {
+  --pink: #e88aa7;
+  --pink-dark: #b94d72;
+  --pink-deep: #8e3556;
+
+  --pink-light: #fff0f5;
+
+  --rose: #f6c1d0;
+
+  --cream: #fffafc;
+
+  --text: #5c3544;
+
+  --gold: #c59a5d;
+
+  --white: #ffffff;
+
+  --shadow: 0 18px 55px rgba(142, 53, 86, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+
+  padding: 0;
+}
+
+body {
+  font-family: "Vazirmatn", sans-serif;
+
+  background: var(--cream);
+
+  color: var(--text);
+
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.card-top,
+.bismillah,
+.love-poem {
+  font-family: "Amiri", serif;
+}
+
+/* =========================
+   کارت اول
+========================= */
+
+.opening-screen {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: linear-gradient(135deg, #fff5f8, #f8d7e2, #fff0f5);
+
+  transition:
+    opacity 1s ease,
+    visibility 1s ease,
+    transform 1s ease;
+}
+
+.opening-screen.hidden {
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: scale(1.08);
+}
+
+.invitation-card-wrap {
+  padding: 18px;
+
+  animation: cardFloat 4s ease-in-out infinite;
+}
+
+.invitation-card {
+  position: relative;
+
+  width: min(390px, 88vw);
+
+  min-height: 590px;
+
+  padding: 42px 28px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  border: 2px solid rgba(197, 154, 93, 0.5);
+
+  border-radius: 220px 220px 30px 30px;
+
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.94),
+    rgba(255, 245, 249, 0.96)
+  );
+
+  box-shadow:
+    0 35px 90px rgba(145, 60, 88, 0.22),
+    inset 0 0 0 9px rgba(255, 255, 255, 0.6);
+}
+
+.card-flower {
+  position: absolute;
+
+  color: var(--pink);
+
+  font-size: 42px;
+
+  opacity: 0.65;
+}
+
+.flower-1 {
+  top: 25px;
+
+  right: 25px;
+}
+
+.flower-2 {
+  bottom: 25px;
+
+  left: 25px;
+}
+
+.card-top {
+  color: var(--pink-deep);
+
+  font-size: 27px;
+}
+
+.card-ornament {
+  color: var(--gold);
+
+  font-size: 35px;
+}
+
+.small-intro {
+  color: #946071;
+
+  margin: 6px 0 18px;
+}
+
+.invitation-card h1 {
+  color: var(--pink-deep);
+
+  font-size: 39px;
+
+  line-height: 1.05;
+
+  margin: 3px 0;
+}
+
+.and {
+  color: var(--gold);
+
+  font-size: 28px;
+}
+
+.card-line {
+  width: 100px;
+
+  height: 1px;
+
+  background: var(--gold);
+
+  margin: 15px 0;
+}
+
+.card-date {
+  font-size: 19px;
+
+  font-weight: 600;
+
+  color: var(--pink-dark);
+}
+
+.card-place {
+  font-size: 14px;
+}
+
+.open-btn {
+  border: 0;
+
+  border-radius: 50px;
+
+  background: linear-gradient(135deg, var(--pink-dark), var(--pink));
+
+  color: white;
+
+  padding: 13px 23px;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(185, 77, 114, 0.25);
+
+  transition: 0.3s;
+}
+
+.open-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* =========================
+   منو
+========================= */
+
+.wedding-nav {
+  background: rgba(255, 250, 252, 0.88);
+
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(232, 138, 167, 0.2);
+}
+
+.navbar-brand {
+  color: var(--pink-deep) !important;
+
+  font-family: "Amiri", serif;
+
+  font-size: 25px;
+}
+
+.nav-link {
+  color: var(--text) !important;
+
+  transition: 0.25s;
+}
+
+.nav-link:hover {
+  color: var(--pink-dark) !important;
+}
+
+/* =========================
+   صفحه اصلی
+========================= */
+
+.hero-section {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(135deg, rgba(112, 30, 62, 0.75), rgba(225, 113, 147, 0.55)),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=90")
+      center / cover;
+}
+
+.hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+    circle at center,
+    transparent 5%,
+    rgba(75, 19, 40, 0.38)
+  );
+}
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  color: white;
+
+  padding: 120px 15px 70px;
+}
+
+.bismillah {
+  font-size: clamp(30px, 5vw, 48px);
+}
+
+.hero-ornament {
+  color: #f7d7a5;
+
+  font-size: 35px;
+}
+
+.love-poem {
+  font-size: clamp(19px, 3vw, 26px);
+
+  line-height: 2;
+
+  margin: 10px auto 22px;
+}
+
+.hero-names h2 {
+  display: inline-block;
+
+  font-size: clamp(38px, 7vw, 66px);
+
+  margin: 0 9px;
+}
+
+.hero-names span {
+  font-family: "Amiri", serif;
+
+  font-size: 35px;
+
+  color: #f7d7a5;
+}
+
+.hero-info {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 12px;
+}
+
+.hero-info div {
+  min-width: 185px;
+
+  padding: 13px 17px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(8px);
+}
+
+.hero-info i {
+  margin-left: 7px;
+
+  color: #f7d7a5;
+}
+
+.scroll-down {
+  display: inline-flex;
+
+  margin-top: 35px;
+
+  width: 48px;
+
+  height: 48px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  color: white;
+
+  border-radius: 50%;
+
+  align-items: center;
+
+  justify-content: center;
+
+  animation: bounce 1.8s infinite;
+}
+
+/* قلب‌های متحرک */
+
+.floating-heart {
+  position: absolute;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 60px;
+
+  animation: floatHeart 7s infinite ease-in-out;
+}
+
+.heart-a {
+  top: 15%;
+
+  right: 8%;
+}
+
+.heart-b {
+  bottom: 20%;
+
+  left: 7%;
+
+  animation-delay: 2s;
+}
+
+.heart-c {
+  top: 45%;
+
+  left: 15%;
+
+  animation-delay: 4s;
+}
+
+/* =========================
+   بخش‌ها
+========================= */
+
+.section {
+  padding: 100px 0;
+}
+
+.couple-section {
+  background: linear-gradient(180deg, #fff8fb, #fff);
+}
+
+.event-section {
+  background: var(--pink-light);
+}
+
+.section-heading {
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
+.section-heading span {
+  color: var(--pink-dark);
+}
+
+.section-heading h2 {
+  font-size: 43px;
+
+  color: var(--pink-deep);
+}
+
+.heading-line {
+  width: 80px;
+
+  height: 2px;
+
+  margin: auto;
+
+  background: var(--gold);
+}
+
+/* =========================
+   عکس عروس و داماد
+========================= */
+
+.couple-photo-card {
+  max-width: 760px;
+
+  margin: auto;
+
+  padding: 15px;
+
+  border-radius: 34px;
+
+  background: white;
+
+  box-shadow: var(--shadow);
+}
+
+.couple-photo-frame {
+  overflow: hidden;
+
+  border-radius: 25px;
+
+  border: 5px solid white;
+
+  outline: 1px solid rgba(232, 138, 167, 0.5);
+}
+
+.couple-photo-frame img {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  max-height: 720px;
+
+  object-fit: cover;
+
+  transition: transform 1s ease;
+}
+
+.couple-photo-card:hover img {
+  transform: scale(1.025);
+}
+
+.couple-photo-caption {
+  text-align: center;
+
+  padding: 18px 10px 5px;
+}
+
+.couple-photo-caption h3 {
+  color: var(--pink-deep);
+
+  font-size: 31px;
+}
+
+.couple-photo-caption p {
+  color: #8b5d6d;
+}
+
+/* =========================
+   پیام عشق
+========================= */
+
+.couple-message {
+  margin: 50px auto 0;
+
+  text-align: center;
+
+  color: #875366;
+
+  font-family: "Amiri", serif;
+
+  font-size: 24px;
+}
+
+.couple-message i {
+  color: var(--pink);
+}
+
+/* =========================
+   کارت‌های مراسم
+========================= */
+
+.info-card {
+  height: 100%;
+
+  text-align: center;
+
+  padding: 35px 20px;
+
+  border-radius: 25px;
+
+  background: white;
+
+  box-shadow: 0 14px 40px rgba(142, 53, 86, 0.08);
+
+  transition: 0.35s;
+}
+
+.info-card:hover {
+  transform: translateY(-7px);
+}
+
+.icon-circle {
+  width: 70px;
+
+  height: 70px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: white;
+
+  background: linear-gradient(135deg, var(--pink-dark), var(--pink));
+
+  font-size: 28px;
+}
+
+.info-card h3 {
+  color: var(--pink-deep);
+
+  font-size: 27px;
+}
+
+.info-card p {
+  font-size: 19px;
+
+  font-weight: 600;
+}
+
+/* =========================
+   شمارش معکوس
+========================= */
+
+.countdown-box {
+  max-width: 850px;
+
+  margin: 55px auto 0;
+
+  text-align: center;
+}
+
+.countdown-box h3 {
+  color: var(--pink-deep);
+
+  font-size: 30px;
+}
+
+.countdown {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+
+  margin-top: 18px;
+}
+
+.countdown > div {
+  width: 125px;
+
+  padding: 17px 8px;
+
+  border-radius: 20px;
+
+  background: white;
+
+  box-shadow: 0 12px 30px rgba(142, 53, 86, 0.09);
+}
+
+.countdown strong {
+  display: block;
+
+  color: var(--pink-dark);
+
+  font-size: 34px;
+}
+
+/* نقشه */
+
+.map-btn {
+  display: inline-flex;
+
+  gap: 8px;
+
+  align-items: center;
+
+  text-decoration: none;
+
+  color: white;
+
+  background: var(--pink-dark);
+
+  padding: 13px 22px;
+
+  border-radius: 50px;
+}
+
+.map-btn:hover {
+  color: white;
+
+  background: var(--pink-deep);
+}
+
+/* =========================
+   خواهش دوستانه
+========================= */
+
+.notice-section {
+  background: white;
+}
+
+.notice-card {
+  max-width: 900px;
+
+  margin: auto;
+
+  padding: 55px 45px;
+
+  border-radius: 35px;
+
+  background: linear-gradient(135deg, #fff8fb, #fff);
+
+  border: 1px solid var(--rose);
+
+  box-shadow: var(--shadow);
+
+  text-align: center;
+}
+
+.notice-top-icon {
+  width: 70px;
+
+  height: 70px;
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--pink-light);
+
+  color: var(--pink-dark);
+
+  font-size: 30px;
+}
+
+.notice-card h2 {
+  color: var(--pink-deep);
+
+  font-size: 40px;
+}
+
+.notice-items {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+}
+
+.notice-item {
+  display: flex;
+
+  gap: 15px;
+
+  padding: 23px;
+
+  border-radius: 22px;
+
+  background: white;
+
+  border: 1px solid rgba(232, 138, 167, 0.2);
+
+  text-align: right;
+}
+
+.notice-icon {
+  flex: 0 0 52px;
+
+  height: 52px;
+
+  border-radius: 15px;
+
+  background: var(--pink-light);
+
+  color: var(--pink-dark);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 24px;
+}
+
+.notice-item h3 {
+  font-size: 21px;
+
+  color: var(--pink-deep);
+}
+
+.notice-footer {
+  margin-top: 35px;
+
+  color: #8c566a;
+}
+
+/* =========================
+   پایان
+========================= */
+
+.final-section {
+  padding: 100px 0 80px;
+
+  color: white;
+
+  background:
+    linear-gradient(135deg, rgba(142, 53, 86, 0.9), rgba(232, 138, 167, 0.88)),
+    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1800&q=85")
+      center / cover;
+}
+
+.final-section h2 {
+  font-size: clamp(30px, 5vw, 48px);
+}
+
+.final-section p {
+  font-family: "Amiri", serif;
+
+  font-size: 27px;
+}
+
+.final-heart {
+  font-size: 38px;
+
+  color: #ffd5e2;
+
+  animation: heartbeat 1.5s infinite;
+}
+
+.back-home {
+  display: inline-block;
+
+  margin-top: 25px;
+
+  padding: 10px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  border-radius: 30px;
+
+  color: white;
+
+  text-decoration: none;
+}
+
+/* =========================
+   دکمه‌ها
+========================= */
+
+.music-btn,
+.top-btn {
+  position: fixed;
+
+  z-index: 1000;
+
+  width: 50px;
+
+  height: 50px;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  color: white;
+
+  background: var(--pink-dark);
+}
+
+.music-btn {
+  left: 22px;
+
+  bottom: 22px;
+}
+
+.top-btn {
+  right: 22px;
+
+  bottom: 22px;
+
+  opacity: 0;
+
+  visibility: hidden;
+}
+
+.top-btn.show {
+  opacity: 1;
+
+  visibility: visible;
+}
+
+footer {
+  text-align: center;
+
+  padding: 22px;
+
+  color: #936075;
+
+  background: #fff3f7;
+}
+
+/* =========================
+   ظاهر شدن هنگام اسکرول
+========================= */
+
+.reveal {
+  opacity: 0;
+
+  transform: translateY(35px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/* =========================
+   انیمیشن‌ها
+========================= */
+
+@keyframes cardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes floatHeart {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-35px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(9px);
+  }
+}
+
+@keyframes heartbeat {
+  0%,
+  40%,
+  80%,
+  100% {
+    transform: scale(1);
+  }
+
+  20%,
+  60% {
+    transform: scale(1.18);
+  }
+}
+
+/* =========================
+   موبایل
+========================= */
+
+@media (max-width: 767px) {
+  .section {
+    padding: 75px 0;
+  }
+
+  .invitation-card {
+    min-height: 545px;
+
+    padding: 35px 20px;
+  }
+
+  .invitation-card h1 {
+    font-size: 34px;
+  }
+
+  .hero-content {
+    padding-top: 105px;
+  }
+
+  .hero-names h2 {
+    display: block;
+
+    font-size: 43px;
+
+    margin: 0;
+  }
+
+  .hero-names span {
+    display: block;
+
+    line-height: 1;
+  }
+
+  .hero-info div {
+    width: 100%;
+  }
+
+  .section-heading h2 {
+    font-size: 35px;
+  }
+
+  .notice-card {
+    padding: 40px 20px;
+  }
+
+  .notice-items {
+    grid-template-columns: 1fr;
+  }
+
+  .countdown > div {
+    width: 72px;
+  }
+
+  .countdown strong {
+    font-size: 25px;
+  }
+
+  .couple-photo-card {
+    padding: 9px;
+
+    border-radius: 25px;
+  }
+
+  .couple-photo-frame {
+    border-radius: 18px;
+  }
+
+  .couple-photo-frame img {
+    max-height: 620px;
+  }
+
+  .couple-photo-caption h3 {
+    font-size: 25px;
+  }
+
+  .music-btn {
+    left: 15px;
+
+    bottom: 15px;
+  }
+
+  .top-btn {
+    right: 15px;
+
+    bottom: 15px;
+  }
+}
